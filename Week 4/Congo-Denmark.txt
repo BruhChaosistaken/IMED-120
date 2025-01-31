@@ -1,0 +1,39 @@
+var cheight = 400
+var cwidth = 300
+
+function setup() {
+  createCanvas(cwidth, cheight);
+}
+
+function draw() {
+  background(251, 222, 74);
+  noStroke()
+
+  fill(200, 16, 46);
+  rect(0,0, cwidth,cheight/2);
+  
+  fill('white');
+  rect(0,cheight/4,cwidth,20);
+   fill('white');
+  rect(60,0,20,cheight/2);
+  
+  fill(0, 149, 67);
+  strokeWeight(10)
+  line(0,400, cwidth/2, cheight/2);
+  beginShape();
+  vertex(0, cheight / 2);
+  vertex(cwidth/2,cheight/2);
+  vertex(0, cheight);
+  endShape(CLOSE);
+  
+  stroke(220, 36, 31)
+
+  fill(220, 36, 31);
+  strokeWeight(10)
+  beginShape();
+  vertex(cwidth/2, cheight);
+  vertex(cwidth,cheight/2);
+  vertex(cwidth, cheight);
+  endShape(CLOSE);
+  
+}
