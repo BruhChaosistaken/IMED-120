@@ -1,0 +1,54 @@
+var cheight = 200
+var cwidth = 300
+
+//Canvas Height, then Width
+
+var Flag = " "
+
+//Enter Congo or Denmark above
+
+function setup() {
+  createCanvas(cwidth, cheight);
+}
+
+function draw() {
+  background(255);
+  noStroke()
+
+  //Denmark Flag Code
+  
+  if (Flag === "Denmark") {
+  fill(200, 16, 46);
+  rect(0,0, cwidth,cheight);
+  
+  fill('white');
+  rect(0,cheight/3,cwidth,40);
+   fill('white');
+  rect(60,0,40,cheight);
+  }
+  
+  //Congo Flag Code
+  
+  if (Flag === "Congo") {
+  background(251, 222, 74);
+  fill(0, 149, 67);
+  strokeWeight(10)
+  line(0,400, cwidth/2, cheight/2);
+  beginShape();
+  vertex(0, 0);
+  vertex(cwidth/1.5,0);
+  vertex(0, cheight);
+  endShape(CLOSE);
+  
+  stroke(220, 36, 31)
+
+  fill(220, 36, 31);
+  strokeWeight(10)
+  beginShape();
+  vertex(cwidth/3, cheight);
+  vertex(cwidth,0);
+  vertex(cwidth, cheight);
+  endShape(CLOSE);
+  }
+    
+}
