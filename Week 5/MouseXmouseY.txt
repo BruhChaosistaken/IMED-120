@@ -1,0 +1,24 @@
+var brush_size = 10
+var brush_color = 'rgb(0,0,255)'
+
+function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  background('rgba(190,186,186,0)');
+  
+var x = mouseX
+var y = mouseY
+
+  noStroke()
+
+  fill(brush_color)
+  
+  if (mouseIsPressed === true) {
+    
+     ellipse(x,y,brush_size,brush_size)
+    
+  }
+  
+}
