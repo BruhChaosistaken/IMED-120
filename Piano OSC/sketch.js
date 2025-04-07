@@ -1,5 +1,7 @@
 var osc;
- 
+
+var keys = [65, 83, 68, 70, 71, 72, 74,75, 76]
+
 function setup() {
   createCanvas(1000, 400);
   osc = new p5.Oscillator();
@@ -9,7 +11,7 @@ function setup() {
  
 function draw() {
   background(220);
-
+  
   var whiteW = width/19
     // keys half as long as screen
   var whiteH = height/2
@@ -37,7 +39,14 @@ function draw() {
   fill(0, 0, 0)
   rect(whiteW*5.5+k*whiteW, height/4, blackW, blackH, 0, 0, round, round)
   rect(whiteW*12.5+k*whiteW, height/4, blackW, blackH, 0, 0, round, round)
- 
+
+    let colors = ['red',' blue', 'pink']
+  let button_color = random(colors)
+
+  if (keyIsPressed === true) {
+    fill(button_color);
+  }
+    
   }
 if (keyIsDown(65)) {
     osc.start();
@@ -50,7 +59,6 @@ if (keyIsDown(83)) {
     osc.start();
     osc.freq(554.37);
     osc.amp(1000, 0.05);
-    fill('white')
     ellipse(148, 200, 15, 15)
 }
   
@@ -65,7 +73,6 @@ if (keyIsDown(70)) {
     osc.start();
     osc.freq(659.25);
     osc.amp(1000, 0.05);
-    fill('white')
     ellipse(200, 200, 15, 15)
 }
   
@@ -87,7 +94,6 @@ if (keyIsDown(74)) {
     osc.start();
     osc.freq(783.99);
     osc.amp(1000, 0.05);
-    fill('white')
     ellipse(305, 200, 15, 15)
 }
 
@@ -102,7 +108,6 @@ if (keyIsDown(76)) {
     osc.start();
     osc.freq(880);
     osc.amp(1000, 0.05);
-    fill('white')
     ellipse(360, 200, 15, 15)
 }
 
